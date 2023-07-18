@@ -14,15 +14,30 @@
 const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
 const ERROR_STR_GEN = "Irgendwas ging schief!";
 
+
+startApp();
+function startApp() {
+	output(calculator(getNum(),getNum(),getOp()));
+}
+
+function getNum() {
+	return parseInt(prompt("Zahl?"));
+}
+
+function getOp() {
+	return prompt("Operator?");
+}
+
+
 // module: calculator | tests:
 // agreement : "+","-","*",":","/"
-output(calculator(3,2,"+"));
-output(calculator(3,2,"-"));
-output(calculator(3,2,"*"));
-output(calculator(3,2,":"));
-output(calculator(3,2,"/"));
-output(calculator(3,0,"/"));
-output(calculator(3,2,"#?!"));
+// output(calculator(3,2,"+"));
+// output(calculator(3,2,"-"));
+// output(calculator(3,2,"*"));
+// output(calculator(3,2,":"));
+// output(calculator(3,2,"/"));
+// output(calculator(3,0,"/"));
+// output(calculator(3,2,"#?!"));
 function calculator(a,b,op) {
 	switch (op) {
 		case "+":
